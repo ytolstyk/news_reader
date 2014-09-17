@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+div {
+  display: table-cell;
+  vertical-align: top;
+}

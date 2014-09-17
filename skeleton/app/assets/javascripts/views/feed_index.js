@@ -18,7 +18,7 @@ NewsReader.Views.FeedIndex = Backbone.View.extend({
     'click button.btn-refresh': 'refresh',
     'click button.btn-delete': 'destroy',
     "click button.btn-new-feed": "newForm",
-    "submit form.new-feed-form": "create"
+    "submit form.new-feed-form": "create",
   },
   
   newForm: function () {
@@ -35,6 +35,7 @@ NewsReader.Views.FeedIndex = Backbone.View.extend({
   },
   
   create: function(event) {
+    event.preventDefault();
     var $form = $(event.currentTarget)
     var that = this;
     var newFeed = new NewsReader.Models.Feed({

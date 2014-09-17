@@ -7,7 +7,8 @@ window.NewsReader = {
     console.log("Backbone is running");
       
     new NewsReader.Routers.FeedRouter ({
-      $content: $("#content")
+      $content: $("#content"),
+      $subview: $("#subview")
     });
     
     Backbone.history.start();
